@@ -1,8 +1,6 @@
 package money.domain;
 
 public class Dollar extends Money {
-    private int amount;
-
     public Dollar(int amount) {
         this.amount = amount;
     }
@@ -13,7 +11,7 @@ public class Dollar extends Money {
 
     @Override
     public boolean equals(Object o) {
-        Dollar dollar = (Dollar) o;
-        return amount == dollar.amount;
+        Money money = (Money) o;
+        return amount == money.amount;
     }
 }
