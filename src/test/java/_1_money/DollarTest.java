@@ -17,6 +17,7 @@ class DollarTest {
     }
 
     @Test
+    @Disabled
     void testMultiplication_2() {
         Dollar five = new Dollar(5);
         Dollar product = five.times(2);
@@ -30,5 +31,12 @@ class DollarTest {
     void testEquality_3() {
         assertTrue(new Dollar(5).equals(new Dollar(5)));
         assertFalse(new Dollar(5).equals(new Dollar(6)));
+    }
+
+    @Test
+    void testMultiplication_4() {
+        Dollar five = new Dollar(5);
+        assertEquals(new Dollar(10), five.times(2));
+        assertEquals(new Dollar(15), five.times(3));
     }
 }
