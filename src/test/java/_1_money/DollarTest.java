@@ -1,6 +1,7 @@
 package _1_money;
 
 import money.domain.Dollar;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -8,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class DollarTest {
 
     @Test
+    @Disabled
     void testMultiplication_1() {
         Dollar five = new Dollar(5);
         five.times(2);
