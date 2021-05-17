@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class DollarTest {
 
@@ -26,4 +27,8 @@ class DollarTest {
         assertEquals(15, product.amount);
     }
 
+    @Test
+    void testEquality_3() {
+        assertTrue(new Dollar(5).equals(new Dollar(5)));
+    }
 }
