@@ -1,6 +1,7 @@
 package _1_money;
 
 import money.domain.Dollar;
+import money.domain.Franc;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
