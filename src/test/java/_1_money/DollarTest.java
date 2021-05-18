@@ -53,4 +53,9 @@ class DollarTest {
         assertTrue(new Franc(5).equals(new Franc(5)));
         assertFalse(new Franc(5).equals(new Franc(6)));
     }
+
+    @Test
+    void testEquality_7() {
+        assertFalse(new Franc(5).equals(new Dollar(5)));
+    }
 }
