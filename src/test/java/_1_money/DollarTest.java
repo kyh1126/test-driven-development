@@ -1,5 +1,6 @@
 package _1_money;
 
+import money.domain.Franc;
 import money.domain.Money;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -90,5 +91,10 @@ class DollarTest {
     void testCurrency_9() {
         assertEquals("USD", Money.dollar(1).currency());
         assertEquals("CHF", Money.franc(1).currency());
+    }
+
+    @Test
+    void testDifferentClassEquality_10() {
+        assertTrue(new Money(10, "CHF").equals(new Franc(10, "CHF")));
     }
 }
