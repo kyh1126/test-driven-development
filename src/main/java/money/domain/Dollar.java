@@ -2,8 +2,7 @@ package money.domain;
 
 public class Dollar extends Money {
     public Dollar(int amount, String currency) {
-        this.amount = amount;
-        currency = currency;
+        super(amount, currency);
     }
 
     public Money times(int multiplier) {
