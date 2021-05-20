@@ -30,6 +30,7 @@ class DollarTest {
     }
 
     @Test
+    @Disabled
     void testEquality_3() {
         assertTrue(new Dollar(5).equals(new Dollar(5)));
         assertFalse(new Dollar(5).equals(new Dollar(6)));
@@ -52,20 +53,38 @@ class DollarTest {
     }
 
     @Test
+    @Disabled
     void testEquality_6() {
         assertTrue(new Franc(5).equals(new Franc(5)));
         assertFalse(new Franc(5).equals(new Franc(6)));
     }
 
     @Test
+    @Disabled
     void testEquality_7() {
         assertFalse(new Franc(5).equals(new Dollar(5)));
     }
 
     @Test
+    void testMultiplication_8() {
+        Money five = Money.dollar(5);
+        assertEquals(Money.dollar(10), five.times(2));
+        assertEquals(Money.dollar(15), five.times(3));
+    }
+
+    @Test
+    void testFrancMultiplication_8() {
+        Money five = new Franc(5);
+        assertEquals(new Franc(10), five.times(2));
+        assertEquals(new Franc(15), five.times(3));
+    }
+
+    @Test
     void testEquality_8() {
-        Dollar five = Money.dollar(5);
-        assertEquals(new Dollar(10), five.times(2));
-        assertEquals(new Dollar(15), five.times(3));
+        assertTrue(Money.dollar(5).equals(Money.dollar(5)));
+        assertFalse(Money.dollar(5).equals(Money.dollar(6)));
+        assertTrue(new Franc(5).equals(new Franc(5)));
+        assertFalse(new Franc(5).equals(new Franc(6)));
+        assertFalse(new Franc(5).equals(Money.dollar(5)));
     }
 }
