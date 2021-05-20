@@ -1,6 +1,6 @@
 package money.domain;
 
-public abstract class Money {
+public class Money {
     protected int amount;
     protected String currency;
 
@@ -17,7 +17,9 @@ public abstract class Money {
         this.currency = currency;
     }
 
-    public abstract Money times(int multiplier);
+    public Money times(int multiplier) {
+        return null;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -28,5 +30,10 @@ public abstract class Money {
 
     public String currency() {
         return currency;
+    }
+
+    @Override
+    public String toString() {
+        return amount + " " + currency;
     }
 }
