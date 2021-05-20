@@ -2,6 +2,7 @@ package money.domain;
 
 public abstract class Money {
     protected int amount;
+    protected String currency;
 
     public static Money dollar(int amount) {
         return new Dollar(amount);
@@ -20,5 +21,7 @@ public abstract class Money {
                 && getClass().equals(money.getClass());
     }
 
-    public abstract String currency();
+    public String currency() {
+        return currency;
+    }
 }
