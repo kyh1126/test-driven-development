@@ -1,9 +1,9 @@
 package money.domain;
 
 public class Franc extends Money {
-    public Franc(int amount) {
+    public Franc(int amount, String currency) {
         this.amount = amount;
-        currency = "CHF";
+        currency = currency;
     }
 
     public Money times(int multiplier) {
