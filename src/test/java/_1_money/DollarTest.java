@@ -1,6 +1,5 @@
 package _1_money;
 
-import money.domain.Franc;
 import money.domain.Money;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -72,10 +71,11 @@ class DollarTest {
     }
 
     @Test
+    @Disabled
     void testFrancMultiplication_8() {
-        Money five = Money.franc(5);
-        assertEquals(Money.franc(10), five.times(2));
-        assertEquals(Money.franc(15), five.times(3));
+//        Money five = Money.franc(5);
+//        assertEquals(Money.franc(10), five.times(2));
+//        assertEquals(Money.franc(15), five.times(3));
     }
 
     @Test
@@ -92,7 +92,8 @@ class DollarTest {
     }
 
     @Test
+    @Disabled
     void testDifferentClassEquality_10() {
-        assertTrue(new Money(10, "CHF").equals(new Franc(10, "CHF")));
+//        assertTrue(new Money(10, "CHF").equals(new Franc(10, "CHF")));
     }
 }
