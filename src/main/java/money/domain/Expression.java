@@ -1,2 +1,4 @@
-package money.domain;public interface Expression {
+package money.domain;
+
+public interface Expression {
 }
