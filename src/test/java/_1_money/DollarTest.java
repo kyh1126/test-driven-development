@@ -1,5 +1,6 @@
 package _1_money;
 
+import money.domain.Bank;
 import money.domain.Money;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -99,7 +100,11 @@ class DollarTest {
 
     @Test
     void testSimpleAddition_11() {
-        Money sum = Money.dollar(5).plus(Money.dollar(5));
-        assertEquals(Money.dollar(10), sum);
+        Money five = Money.dollar(5);
+        Expression sum = five.plus(five);
+
+        Bank bank = new Bank();
+        Money reduced = bank.reduce(sum, "USD");
+        assertEquals(Money.dollar(10), reduced);
     }
 }
