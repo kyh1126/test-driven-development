@@ -3,6 +3,7 @@ package _1_money;
 import money.domain.Bank;
 import money.domain.Expression;
 import money.domain.Money;
+import money.domain.Sum;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
