@@ -96,4 +96,10 @@ class DollarTest {
     void testDifferentClassEquality_10() {
 //        assertTrue(new Money(10, "CHF").equals(new Franc(10, "CHF")));
     }
+
+    @Test
+    void testSimpleAddition_11() {
+        Money sum = Money.dollar(5).plus(Money.dollar(5));
+        assertEquals(Money.dollar(10), sum);
+    }
 }
