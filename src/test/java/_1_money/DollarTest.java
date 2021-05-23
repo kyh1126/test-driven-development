@@ -143,6 +143,11 @@ class DollarTest {
     }
 
     @Test
+    void testArrayEquals_14() {
+        assertNotEquals(new Object[]{"abc"}, new Object[]{"abc"});
+    }
+
+    @Test
     void testIdentityRate_14() {
         assertEquals(1, new Bank().rate("USD", "USD"));
     }
