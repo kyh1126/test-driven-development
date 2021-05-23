@@ -1,6 +1,10 @@
 package money.domain;
 
+import java.util.Hashtable;
+
 public class Bank {
+    private Hashtable<Pair, Integer> rates = new Hashtable<>();
+
     public Bank() {
     }
 
@@ -9,9 +13,11 @@ public class Bank {
     }
 
     public void addRate(String from, String to, int rate) {
+        rates.put(new Pair(from, to), rate);
     }
 
     public int rate(String from, String to) {
-        return (from.equals("CHF") && to.equals("USD")) ? 2 : 1;
+        if (from.equals(to)) return 1;
+        return rates.get(new Pair(from, to));
     }
 }
