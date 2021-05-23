@@ -188,6 +188,7 @@ class DollarTest {
     }
 
     @Test
+    @Disabled
     void testPlusSameCurrencyReturnsMoney_16() {
         Expression sum = Money.dollar(1).plus(Money.dollar(1));
         assertTrue(sum instanceof Money);
