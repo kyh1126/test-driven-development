@@ -10,4 +10,8 @@ class FibonacciTest {
     void testFibonacci() {
         assertEquals(fib(0), 0);
     }
+
+    private int fib(int n) {
+        return 0;
+    }
 }
