@@ -9,6 +9,7 @@ class FibonacciTest {
     @Test
     void testFibonacci() {
         assertEquals(fib(0), 0);
+        assertEquals(fib(1), 1);
     }
 
     private int fib(int n) {
