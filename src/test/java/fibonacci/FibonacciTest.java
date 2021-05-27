@@ -9,8 +9,8 @@ class FibonacciTest {
 
     @Test
     void testFibonacci() {
-        assertEquals(fib(1), 1);
-        assertEquals(fib(4), 3);
+        assertEquals(1, fib(1));
+        assertEquals(3, fib(4));
         assertThrows(IllegalArgumentException.class, () -> fib(-1));
     }
 
